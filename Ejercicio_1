@@ -1,0 +1,28 @@
+print("Ejercicio 1:")
+
+password = "El abuelo Sam"
+intentos = 0
+
+while intentos < 3:
+    
+    teclado = input("Inserta la contraseña: ")
+
+    if password.lower() == teclado.lower():
+        print("Clave correcta. Confirma tu edad para ingresar.")
+    
+        edad = int(input("¿Cuántos años tienes?: "))
+    
+        if edad >= 16:
+            print("¡Bienvenid@ a la fiesta, disfrútala!")
+        
+        else:
+            print("Lo sentimos, eres menor de 16 años. No puedes ingresar.")
+            
+        break
+
+    else:
+        intentos += 1
+        print("ERROR, no puedes entrar al museo. Máximo 3 intentos.")
+    
+if intentos == 3:
+    print("ERROR: LLEGASTE AL LÍMITE DE INTENTOS.")
